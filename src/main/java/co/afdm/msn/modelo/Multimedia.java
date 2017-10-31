@@ -14,6 +14,13 @@ public class Multimedia {
 	//Fecha de actualización
 	private java.util.Date fechaActualizacion;
 	
+	//Adicionar atributo del tamaño del contenido Multimedia
+	protected Integer tamanio;
+	//Adicionar atributo de la longitud
+	protected Integer longitud;
+	
+	
+	
 	//Getters y Setters
 	public String getUbicacion() {
 		return ubicacion;
@@ -54,6 +61,24 @@ public class Multimedia {
 	public void setFechaActualizacion(java.util.Date fechaActualizacion) {
 		this.fechaActualizacion = fechaActualizacion;
 	}
+
+	public Integer getTamanio() {
+		return tamanio;
+	}
+
+	public void setTamanio(Integer tamanio) {
+		this.tamanio = tamanio;
+	}
+
+	public Integer getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(Integer longitud) {
+		this.longitud = longitud;
+	}
+	
+	
 
 
 }

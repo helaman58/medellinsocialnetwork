@@ -3,6 +3,8 @@ package co.afdm.msn.modelo;
 public class Publicacion {
 	
 	//Atributos
+	//Adicionamos atributo título de la publicación
+	private String titulo;
 	//Creamos atributo texto de la publicación
 	private String texto;
 	//Creamos atributo fecha de la publicación
@@ -44,7 +46,15 @@ public class Publicacion {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}	
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 	
 
 }
