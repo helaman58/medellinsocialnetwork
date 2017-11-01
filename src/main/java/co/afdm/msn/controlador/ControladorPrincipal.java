@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.terracotta.entity.EntityResponse;
-
 import co.afdm.msn.modelo.Publicacion;
 import co.afdm.msn.modelo.Usuario;
 import co.afdm.msn.servicio.RedSocialServiceImpl;
