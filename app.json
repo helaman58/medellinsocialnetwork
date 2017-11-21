@@ -1,0 +1,20 @@
+{
+  "name": "medellinsocialnetwork",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/java"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
