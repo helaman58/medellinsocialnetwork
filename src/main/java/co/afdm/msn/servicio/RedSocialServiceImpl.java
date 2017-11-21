@@ -1,14 +1,20 @@
 package co.afdm.msn.servicio;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import co.afdm.msn.dao.RedSocialDao;
+import co.afdm.msn.modelo.Comentario;
 import co.afdm.msn.modelo.Publicacion;
-import co.afdm.msn.modelo.Usuario;
 
 @Component
 public class RedSocialServiceImpl implements RedSocialService {
+	
+	@Autowired
+	RedSocialDao redSocialDaoImpl;
 
 	@Override
 	public boolean agregarComentario(){
@@ -32,6 +38,7 @@ public class RedSocialServiceImpl implements RedSocialService {
 	
 	@Override
 	public java.util.List<Publicacion> listarPublicaciones(String usuario){
+		/*
 		java.util.List<Publicacion> returnList = new ArrayList<>();
 		Publicacion publicacion = new Publicacion();
 		publicacion.setTitulo("Fractal");
@@ -43,12 +50,17 @@ public class RedSocialServiceImpl implements RedSocialService {
 		publicacion.setFecha(new java.util.Date());
 		publicacion.setTexto("2 Just a simple, single page responsive template brought to you by");
 		returnList.add(publicacion);
-		
 		return returnList;
+		*/
+		
+		return this.redSocialDaoImpl.getPublicaciones();
+		
+		
 	}
 	
 	@Override
-	public java.util.List<Publicacion> listarComentarios(String usuario){
+	public List<Comentario> listarComentarios(String usuario){
+		/*
 		java.util.List<Publicacion> returnList = new ArrayList<>();
 		Publicacion publicacion = new Publicacion();
 		publicacion.setTitulo("Fractal");
@@ -62,5 +74,7 @@ public class RedSocialServiceImpl implements RedSocialService {
 		returnList.add(publicacion);
 		
 		return returnList;
+		*/
+		return this.redSocialDaoImpl.getComentarios();
 	}
 }

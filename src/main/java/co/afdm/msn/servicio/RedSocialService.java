@@ -2,6 +2,7 @@ package co.afdm.msn.servicio;
 
 import java.util.List;
 
+import co.afdm.msn.modelo.Comentario;
 import co.afdm.msn.modelo.Publicacion;
 import co.afdm.msn.modelo.Usuario;
 
@@ -17,6 +18,6 @@ public interface RedSocialService {
 	
 	java.util.List<Publicacion> listarPublicaciones(String usuario);
 
-	List<Publicacion> listarComentarios(String usuario);
+	List<Comentario> listarComentarios(String usuario);
 
 }
