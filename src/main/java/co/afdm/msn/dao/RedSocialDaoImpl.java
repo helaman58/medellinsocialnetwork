@@ -1,7 +1,10 @@
 package co.afdm.msn.dao;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -78,4 +81,12 @@ public class RedSocialDaoImpl implements RedSocialDao {
 		return retObj;
 	}
 
+	@Override
+	public boolean insComentario(String texto){
+        List<Object[]> splitComData = Arrays.asList(texto + ",Julian,1").stream()
+                .map(comentario -> comentario.split(","))
+                .collect(Collectors.toList());
+		this.jdbcTemplate.batchUpdate("INSERT INTO comentario(texto, usuario,pubid) VALUES (?,?,?)", splitComData);
+		return true;
+	}
 }

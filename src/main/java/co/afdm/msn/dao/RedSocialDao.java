@@ -11,4 +11,6 @@ public interface RedSocialDao {
 
 	List<Comentario> getComentarios();
 
+	boolean insComentario(String texto);
+
 }

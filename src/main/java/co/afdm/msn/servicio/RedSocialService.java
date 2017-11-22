@@ -20,4 +20,6 @@ public interface RedSocialService {
 
 	List<Comentario> listarComentarios(String usuario);
 
+	boolean agregarComentario(String texto);
+
 }

@@ -17,8 +17,8 @@ public class RedSocialServiceImpl implements RedSocialService {
 	RedSocialDao redSocialDaoImpl;
 
 	@Override
-	public boolean agregarComentario(){
-		return true;
+	public boolean agregarComentario(String texto){
+		return this.redSocialDaoImpl.insComentario(texto);
 	}
 	
 	@Override
@@ -37,44 +37,18 @@ public class RedSocialServiceImpl implements RedSocialService {
 	}
 	
 	@Override
-	public java.util.List<Publicacion> listarPublicaciones(String usuario){
-		/*
-		java.util.List<Publicacion> returnList = new ArrayList<>();
-		Publicacion publicacion = new Publicacion();
-		publicacion.setTitulo("Fractal");
-		publicacion.setFecha(new java.util.Date());
-		publicacion.setTexto("Just a simple, single page responsive template brought to you by");
-		returnList.add(publicacion);
-		publicacion = new Publicacion();
-		publicacion.setTitulo("Fractal 2");
-		publicacion.setFecha(new java.util.Date());
-		publicacion.setTexto("2 Just a simple, single page responsive template brought to you by");
-		returnList.add(publicacion);
-		return returnList;
-		*/
-		
-		return this.redSocialDaoImpl.getPublicaciones();
-		
-		
+	public java.util.List<Publicacion> listarPublicaciones(String usuario){		
+		return this.redSocialDaoImpl.getPublicaciones();		
 	}
 	
 	@Override
 	public List<Comentario> listarComentarios(String usuario){
-		/*
-		java.util.List<Publicacion> returnList = new ArrayList<>();
-		Publicacion publicacion = new Publicacion();
-		publicacion.setTitulo("Fractal");
-		publicacion.setFecha(new java.util.Date());
-		publicacion.setTexto("Just a simple, single page responsive template brought to you by");
-		returnList.add(publicacion);
-		publicacion = new Publicacion();
-		publicacion.setTitulo("Fractal 2");
-		publicacion.setFecha(new java.util.Date());
-		publicacion.setTexto("2 Just a simple, single page responsive template brought to you by");
-		returnList.add(publicacion);
-		
-		return returnList;
-		*/
 		return this.redSocialDaoImpl.getComentarios();
+	}
+
+	@Override
+	public boolean agregarComentario() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
